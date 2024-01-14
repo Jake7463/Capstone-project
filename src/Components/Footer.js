@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer>
-            <img src="/imgaes/restauranfood.jpg" alt="Litte Lemon's restaurant food"></img>
+            <img src="/src/Images/restauranfood.jpg" type="image/jpeg" alt="Litte Lemon's restaurant food"></img>
             <ul>
                 <li><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>
