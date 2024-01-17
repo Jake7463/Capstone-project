@@ -1,7 +1,9 @@
+import footerLogo from '../Images/footerLogo.jpg';
+
 function Footer() {
     return (
         <footer>
-            <img src="/src/Images/restauranfood.jpg" type="image/jpeg" alt="Litte Lemon's restaurant food"></img>
+            <img src={footerLogo} type="image/jpeg" alt="Litte Lemon's restaurant food" width="80px"/>
             <ul>
                 <li><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>

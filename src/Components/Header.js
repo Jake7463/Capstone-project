@@ -1,7 +1,9 @@
+import Logo from '../Images/Logo.svg';
+
 function Header() {
     return (
         <header>
-            <img src="../Images/logo.svg" type="image/svg+xml" alt="logo"></img>
+            <img src={Logo} type="image/svg+xml" alt="logo"/>
         </header>
     )
 }
