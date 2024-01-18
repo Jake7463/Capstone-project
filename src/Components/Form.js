@@ -1,6 +1,7 @@
 function Form() {
     return (
-        <form>This is form
+        <form>
+            <input>Form</input>
             <button type="button" role="submit">Submit</button>
         </form>
     )
