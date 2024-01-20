@@ -1,22 +1,35 @@
-header {
-  display: flex;
-  padding-left: 15%;
-  margin: 1%;
-  flex-wrap: wrap;
-}
-
 ul{
   list-style-type: none;
+}
+
+button{
+  background-color: #f4ce14;
+  border-radius: 16px;
+  padding: 2%;
+  border-style: none;
+  font-family: 'karla',sans-serif;
+  font-weight: 800;
+  font-size: 18pt;
 }
 
 img{
   border-radius: 16px;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15%;
+  padding-right: 5%;
+  margin: 1%;
+  flex-wrap: wrap;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  padding-left: 15%;
+  width: 60%;
 }
 
 nav ul{
@@ -28,7 +41,6 @@ nav ul{
   width: 100%;
   padding-left: 5%;
   margin-left: 3%;
-  padding-right: 20%;
 }
 
 #hero{
@@ -37,6 +49,10 @@ nav ul{
   width: 100%;
   align-items: stretch;
   background-color: #495e57;
+}
+
+#hero button{
+  margin-top: 15%;
 }
 
 #hero img{
@@ -51,6 +67,11 @@ nav ul{
   flex-direction: column;
   padding-left: 16%;
   align-items: flex-start;
+  color: #edefee;
+}
+
+#hero h1{
+  color: #f4ce14;
 }
 
 #texts h2{
@@ -61,18 +82,60 @@ nav ul{
   max-width: 45%;
 }
 
-#specials{
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 16%;
-  padding-right: 15%;
+#menu{
+  margin-left: 16%;
+  margin-right: 14%;
+  justify-items: center;
 }
 
-#specials button{
+#menu button{
   position: relative;
-  margin-left: 87%;
-  top: -52px;
+  margin-left: 80%;
+  top: -65px;
+}
+
+#specials{
+  position: relative;
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  flex-wrap: wrap;
+}
+
+#specials img{
+  max-width: 350px;
+  min-width: 150px;
+  max-height: 233px;
+  border-radius: 16px 16px 0 0;
+}
+
+#specials span{
+  display: flex;
+  margin-left: 3%;
+}
+
+#specials p{
+  margin: 3%;
+}
+
+#specials article{
+  background-color: #edefee;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  width: fit-content;
+}
+
+#specials #price{
+  margin-left: 12%;
+  top: 14%;
+  position: relative;
+  float: right;
+  color: #EE9972;
 }
 
 #testimonials{
