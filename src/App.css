@@ -95,7 +95,6 @@ nav ul{
 }
 
 #specials{
-  position: relative;
   width: 100%;
   margin-top: 5%;
   display: flex;
@@ -103,13 +102,15 @@ nav ul{
   gap: 10%;
   justify-content: space-between;
   margin-bottom: 5%;
-  flex-wrap: wrap;
+}
+
+#specials p{
+  max-width: 40%;
 }
 
 #specials img{
-  max-width: 350px;
-  min-width: 150px;
-  max-height: 233px;
+  width: 100%;
+  aspect-ratio: 9 / 6;
   border-radius: 16px 16px 0 0;
 }
 
@@ -127,40 +128,69 @@ nav ul{
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  width: fit-content;
+  width: 30%;
 }
 
 #specials #price{
   margin-left: 12%;
-  top: 14%;
+  top: 22%;
   position: relative;
+  justify-self: end;
   float: right;
   color: #EE9972;
 }
 
-#testimonials{
+#testi{
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: #f4ce14;
   align-items: center;
+}
+
+#testimonials{
+  display: flex;
+  gap: 7%;
+  justify-self: center;
+  display: flex;
+  align-items: center;
   justify-items: center;
+  width: 50%;
+}
+
+#testimonial1{
+  background-color: #edefee;
+  border-radius: 16px;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 10%;
+}
+
+#img3{
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+#star{
+  max-width: 20%;
+  margin-top: 18%;
 }
 
 #about{
   display: flex;
   flex-direction: column;
   padding-left: 16%;
+  padding-right: 16%;
+  margin-bottom: 10%;
 }
 
-#about img{
-  display: flex;
-  width: 12em;
-  border-radius: 16px;
-  height: auto;
-  position: relative;
-  margin-left: 16%;
-  margin-top: -30px;
+#about h2{
+  margin-top: -2%;
+}
+
+#about h1{
+  color:#f4ce14;
 }
 
 footer{
@@ -188,4 +218,61 @@ footer img{
 
 figcaption{
   padding-left: 31%;
+}
+
+@media screen and (min-width: 701px) {
+  #specials{
+    flex-wrap: nowrap;
+  }
+  #about img{
+    display: flex;
+    width: 22em;
+    border-radius: 16px;
+    height: auto;
+    position: relative;
+    margin-top: -300px;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+  #img2{
+    top: 80px;
+  }
+  #img1{
+    right: 120px;
+    top: -125px;
+  }
+  #about p{
+    max-width: 45%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  #specials {
+    flex-wrap: wrap;
+    row-gap: 15%;
+    gap: 40px;
+  }
+  #hero{
+    padding-bottom: 10%;
+  }
+  #hero img{
+    display: none;
+  }
+  #menu{
+    padding-top: 5%;
+  }
+  #specials article{
+    background-color: #edefee;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    width: auto;
+  }
+  #testimonials{
+    flex-wrap: wrap;
+  }
+  #about img{
+    margin-bottom: 5%;
+  }
 }

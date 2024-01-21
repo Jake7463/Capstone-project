@@ -1,8 +1,12 @@
+import React from "react";
+
 function ReserveForm() {
     return (
         <form>
-            <input type="text">Form</input>
-            <button type="button" role="submit">Continue</button>
+            <label>
+                Name:
+                <input type="text" name="name" />
+            </label>
         </form>
     )
 }
