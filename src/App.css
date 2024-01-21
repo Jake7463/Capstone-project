@@ -12,6 +12,10 @@ button{
   font-size: 18pt;
 }
 
+button:hover{
+  transform: scale(1.1);
+}
+
 img{
   border-radius: 16px;
 }
@@ -275,4 +279,47 @@ figcaption{
   #about img{
     margin-bottom: 5%;
   }
+}
+
+#form1{
+  margin: 5% 22% 5% 22%;
+  border-radius: 16px;
+  padding: 1% 20% 2% 5%;
+  background-color: #edefee;
+  display: flex;
+  flex-direction: column;
+}
+
+#form1 button{
+  justify-self: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: 2%;
+  margin-top: 4%;
+}
+
+#form1 h2{
+  justify-self: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#input{
+  flex: 0 0 200px;
+  margin-left: 10px;
+}
+
+#radio{
+  justify-content: flex-start;
+  margin-left: auto;
 }
