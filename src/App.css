@@ -136,11 +136,11 @@ nav ul{
 }
 
 #specials #price{
-  margin-left: 12%;
-  top: 22%;
+  top: 25%;
   position: relative;
-  justify-self: end;
-  float: right;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 5%;
   color: #EE9972;
 }
 

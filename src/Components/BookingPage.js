@@ -7,8 +7,10 @@ function BookingPage(){
     return(
         <>
             <Header />
-            <Hero2 />
-            <BookingForm />
+            <main>
+                <Hero2 />
+                <BookingForm />
+            </main>
             <Footer />
         </>
     )
