@@ -108,23 +108,16 @@ nav ul{
   margin-bottom: 5%;
 }
 
-#specials p{
-  max-width: 40%;
+.text1{
+  min-width: 40%;
+  max-width: 75%;
+  padding-left: 10px;
 }
 
 #specials img{
   width: 100%;
   aspect-ratio: 9 / 6;
   border-radius: 16px 16px 0 0;
-}
-
-#specials span{
-  display: flex;
-  margin-left: 3%;
-}
-
-#specials p{
-  margin: 3%;
 }
 
 #specials article{
@@ -135,12 +128,18 @@ nav ul{
   width: 30%;
 }
 
-#specials #price{
-  top: 25%;
+.specialsSpan{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 10px;
+}
+
+.price{
+  top: 18%;
   position: relative;
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 5%;
   color: #EE9972;
 }
 
