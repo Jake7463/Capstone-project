@@ -47,6 +47,15 @@ nav ul{
   margin-left: 3%;
 }
 
+nav a{
+  text-decoration: none;
+  color: #f4ce14;
+  font-weight: 600;
+  background-color: #495e57;
+  padding: 2px 12px 5px 12px;
+  border-radius: 15px;
+}
+
 #hero{
   display: flex;
   flex-wrap: wrap;
@@ -217,10 +226,17 @@ footer img{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  /* transform: translateX(-20px); */
+}
+
+footer a{
+  text-decoration: none;
+  color: #fff;
 }
 
 figcaption{
-  padding-left: 31%;
+  margin-left: 31%;
+  width: max-content;
 }
 
 @media screen and (min-width: 701px) {
