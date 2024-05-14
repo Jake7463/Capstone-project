@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function BookingForm({availableTimes}) {
+function BookingForm({availableTimes, change}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [sitting, setSitting] = useState("");
@@ -30,7 +30,9 @@ function BookingForm({availableTimes}) {
             <h2>Reservation info</h2>
             <label>
                 Date <sup>*</sup>
-                <input type="date" id="input" name="date" value={date} onChange={(e)=>{setDate(e.target.value)}} />
+                <input type="date" id="input" name="date" value={date} onChange={(e)=>{
+                    setDate(e.target.value);
+                    change(e.target.value)}} />
             </label>
             <label>
                 time <sup>*</sup>
