@@ -6,9 +6,8 @@ import { useReducer } from "react";
 function BookingPage(){
     function updateTimes (state, action) {
         if (action.type === "times_by_date"){
-            return state;
+            return state
         }
-        return state;
     };
 
     function initializeTimes () {
