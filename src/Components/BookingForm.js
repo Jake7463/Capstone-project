@@ -1,20 +1,13 @@
 import React, { useState } from "react";
 
-function BookingForm() {
+function BookingForm({availableTimes}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [sitting, setSitting] = useState("");
     const [diners, setDiners] = useState("");
     const [occasion, setOccasion] = useState("");
     const [comment, setComment] = useState("");
-    const availableTimes = ["17:30", "18:00", "18:30", "19:00", "20:00", "20:30"];
 
-
-    const timeList = (e) =>{
-        return availableTimes.map(e => {
-            return <option value={e} key={e}>{e}</option>
-        });
-    };
     const clearForm = () => {
         setDate("");
         setTime("");
@@ -23,11 +16,14 @@ function BookingForm() {
         setOccasion("");
         setComment("");
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         alert("Thank you fro booking a table at Little Lemon!");
         clearForm();
     };
+
+    const availTimes = availableTimes.map(e => {return <option value={e} key={e}>{e}</option>});
 
     return (
         <form id="form1" onSubmit={handleSubmit}>
@@ -39,7 +35,7 @@ function BookingForm() {
             <label>
                 time <sup>*</sup>
                 <select id="input" name="time" value={time} onChange={(e)=>{setTime(e.target.value)}}>
-                    {timeList()}
+                    {availTimes}
                 </select>
             </label>
             <label>

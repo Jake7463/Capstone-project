@@ -2,12 +2,12 @@ import Footer from "./Footer";
 import Header from "./Header";
 import BookingForm from "./BookingForm";
 
-function BookingPage(){
+function BookingPage({availableTimes}){
     return(
         <>
             <Header />
             <main>
-                <BookingForm />
+                <BookingForm availableTimes={availableTimes}/>
             </main>
             <Footer />
         </>
