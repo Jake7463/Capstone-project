@@ -3,14 +3,15 @@ import Header from "./Header";
 import BookingForm from "./BookingForm";
 import { useReducer } from "react";
 
-function BookingPage(){
-    function updateTimes (state, action) {
-        if (action.type === "times_by_date"){
-            return state
-        }
-    };
+function updateTimes (state, action) {
+    if (action.type === "times_by_date"){
+        return state
+    }
+};
 
-    function initializeTimes () {
+function BookingPage(){
+
+    function initializeTimes(){
         return ["17:30", "18:00", "18:30", "19:00", "20:00", "20:30"];
     };
 
@@ -24,7 +25,7 @@ function BookingPage(){
         <>
             <Header />
             <main>
-                <BookingForm availableTimes={availableTimes} change={change}/>
+                <BookingForm availableTimes={availableTimes.map(e => {return <option value={e} key={e}>{e}</option>})} change={change}/>
             </main>
             <Footer />
         </>

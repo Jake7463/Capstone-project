@@ -22,12 +22,7 @@ function BookingForm({availableTimes, change}) {
         alert("Thank you fro booking a table at Little Lemon!");
         clearForm();
     };
-    console.log(availableTimes)
-    if (typeof(availableTimes) == "array"){
-        const availTimes = availableTimes.map(e => {return <option value={e} key={e}>{e}</option>});
-        console.log(availTimes)
-    }
-    console.log(availableTimes)
+    
     return (
         <form id="form1" onSubmit={handleSubmit}>
             <h2>Reservation info</h2>
@@ -40,7 +35,7 @@ function BookingForm({availableTimes, change}) {
             <label>
                 time <sup>*</sup>
                 <select id="input" name="time" value={time} onChange={(e)=>{setTime(e.target.value)}}>
-                    {availTimes}
+                    {availableTimes}
                 </select>
             </label>
             <label>
