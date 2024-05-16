@@ -1,5 +1,5 @@
 
-function MockBrokenAPI (){
+function MockBadAPI (){
 const dates = [
     ["17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00"],
     ["17:30", "18:00", "18:30", "19:00", "20:00", "21:00"],
@@ -16,12 +16,18 @@ const dates = [
 
 function fetchAPI (date) {
         const randNum = Math.floor(Math.random()*10);
-        const mockTimes = date[randNum];
+        const mockTimes = dates[randNum];
         return mockTimes;
 };
 function submitAPI (data) {
     return true;
 };
+
+return{
+    fetchAPI: fetchAPI(),
+    submitAPI: submitAPI(),
+    dates: dates
+}
 };
 
-export default MockBrokenAPI;
+export default MockBadAPI;
