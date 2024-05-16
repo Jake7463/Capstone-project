@@ -2,22 +2,31 @@ import Footer from "./Footer";
 import Header from "./Header";
 import BookingForm from "./BookingForm";
 import { useReducer } from "react";
+import {fetchAPI, submitAPI} from './mockBrokenAPI'
 
-export function updateTimes (state, action) {
-    if (action.type === "times_by_date"){
-        return state
-    }
-    return state
-};
 
 export function initializeTimes(){
-    return ["17:30", "18:00", "18:30", "19:00", "20:00", "20:30"];
+    const date = new Date();
+    const timesForToday = fetchAPI(date);
+    return timesForToday;
 };
 
 function BookingPage(){
-    
+
+    function updateTimes (state, action) {
+        if (action.type === "times_by_date"){
+            const date = action.nextDate;
+            const times = fetchAPI(date);
+            return times;
+        }
+        return state;
+    };
+
     function change (d){
-        dispatch ({type: "times_by_date"})
+        dispatch ({
+            type: "times_by_date",
+            nextDate: d,
+        })
     };
 
 
