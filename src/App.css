@@ -194,7 +194,7 @@ nav a{
   flex-direction: column;
   padding-left: 16%;
   padding-right: 16%;
-  margin-bottom: 10%;
+  margin: 2% 0 10% 0;
 }
 
 #about h2{
@@ -252,13 +252,15 @@ figcaption{
     margin-top: -300px;
     justify-content: space-between;
     margin-left: auto;
-  }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  }
   #img2{
-    top: 80px;
+    top: -50px;
+    z-index: 1;
   }
   #img1{
+    top: 80px;
     right: 120px;
-    top: -125px;
+    z-index: 2;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   #about p{
     max-width: 45%;
