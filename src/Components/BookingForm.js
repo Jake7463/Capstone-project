@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Route, Router } from "react-router-dom";
 
-function BookingForm({availableTimes, change}) {
+function BookingForm({availableTimes, change, submitForm}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [sitting, setSitting] = useState("");
@@ -19,10 +20,10 @@ function BookingForm({availableTimes, change}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Thank you fro booking a table at Little Lemon!");
         clearForm();
+        submitForm([date,time,sitting,diners,occasion,comment])
     };
-    
+
     return (
         <form id="form1" onSubmit={handleSubmit}>
             <h2>Reservation info</h2>
@@ -84,7 +85,7 @@ function BookingForm({availableTimes, change}) {
                 Add a comment
                 <textarea id="input" name="comment" value={comment} onChange={(e)=>{setComment(e.target.value)}}/>
             </label>
-            <button type="submit">Reserve your table!</button>
+            <button type="submit"> Reserve your table!</button>
         </form>
     )
 }
