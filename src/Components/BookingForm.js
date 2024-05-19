@@ -18,6 +18,8 @@ function BookingForm({availableTimes, change, submitForm}) {
         setComment("");
     }
 
+    const disab = date && time && diners ? true : false;
+
     const handleSubmit = (e) => {
         e.preventDefault();
         clearForm();
@@ -31,11 +33,12 @@ function BookingForm({availableTimes, change, submitForm}) {
                 Date <sup>*</sup>
                 <input type="date" id="input" name="date" value={date} onChange={(e)=>{
                     setDate(e.target.value);
-                    change(e.target.value)}} />
+                    change(e.target.value);}}
+                    required/>
             </label>
             <label>
                 time <sup>*</sup>
-                <select id="input" name="time" value={time} onChange={(e)=>{setTime(e.target.value)}}>
+                <select id="input" name="time" value={time} onChange={(e)=>{setTime(e.target.value)}} required>
                     {availableTimes}
                 </select>
             </label>
@@ -58,7 +61,8 @@ function BookingForm({availableTimes, change, submitForm}) {
             </label>
             <label>
                 Diners <sup>*</sup>
-                <select id="input" value={diners} onChange={(e)=>{setDiners(e.target.value)}} >
+                <select id="input" value={diners} onChange={(e)=>{setDiners(e.target.value)}} required placeholder="Choose:">
+                    <option value="choose">Choose</option>
                     <option value="1" >1</option>
                     <option value="2" >2</option>
                     <option value="3" >3</option>
@@ -85,7 +89,7 @@ function BookingForm({availableTimes, change, submitForm}) {
                 Add a comment
                 <textarea id="input" name="comment" value={comment} onChange={(e)=>{setComment(e.target.value)}}/>
             </label>
-            <button type="submit"> Reserve your table!</button>
+            <button type="submit" disabled={!disab}> Reserve your table!</button>
         </form>
     )
 }
