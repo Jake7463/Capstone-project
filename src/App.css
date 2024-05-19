@@ -239,6 +239,14 @@ figcaption{
   width: max-content;
 }
 
+.submitBtn{
+  color: #495e57;
+}
+.submitBtn:disabled{
+  background-color: rgba(73, 94, 87, 0.5);
+  color: #808080;
+}
+
 @media screen and (min-width: 701px) {
   #specials{
     flex-wrap: nowrap;

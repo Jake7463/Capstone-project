@@ -80,6 +80,7 @@ function BookingForm({availableTimes, change, submitForm}) {
             <label>
                 Occasion
                 <select id="input" value={occasion} onChange={(e)=>{setOccasion(e.target.value)}}>
+                    <option value="choose" >Choose</option>
                     <option value="birthday" >Birthday</option>
                     <option value="anniversary" >anniversary</option>
                     <option value="engagement" >Engagement</option>
@@ -89,7 +90,7 @@ function BookingForm({availableTimes, change, submitForm}) {
                 Add a comment
                 <textarea id="input" name="comment" value={comment} onChange={(e)=>{setComment(e.target.value)}}/>
             </label>
-            <button type="submit" disabled={!disab}> Reserve your table!</button>
+            <button type="submit" className="submitBtn" disabled={!disab}> Reserve your table!</button>
         </form>
     )
 }
